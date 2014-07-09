@@ -139,7 +139,7 @@ export unified='/cygdrive/d/wamp/www/unified/'
 export modeltools='/cygdrive/d/wamp/www/unified/tools'
 export winhome='/cygdrive/d/Users/david'
 
-export PS1="\w\n\h \u\$ "
+export PS1='\w\n\u@\h\$ '
 
 export GREP_OPTIONS="--color=auto"
 
