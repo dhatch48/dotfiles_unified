@@ -165,6 +165,17 @@ extract () {
 }
 export -f extract
 
+delHistory() {
+    start=$1
+    end=$2
+    count=$(( end - start ))
+    while [[ $count -ge 0 ]] ; do
+        history -d "$start"
+        ((count--))
+    done
+}
+export -f delHistory
+
 # Recursively remove files
 #find . -name "Thumbs.db" -print0 | xargs -0 rm
 # Explanation 
