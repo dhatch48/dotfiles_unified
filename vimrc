@@ -9,7 +9,13 @@ let mapleader=","
 " alternatives that it thinks may be correct.
 "set spell spelllang=en_us
 
-set clipboard=unnamed
+" the anonymous register is aliased to the * register - it represents the
+" windows clipboard.
+" With this set, whatever is yanked or deleted in vim to the default
+" register(") will also be stored in *reg. Without, it won't store to the
+" windows clipboard, you will have to manually yank to * so you can paste
+" outside of vim. See keybindings about windows clipboard near end of file.
+"set clipboard=unnamed
 
 
 " .vimrc
@@ -186,7 +192,8 @@ nmap <Leader>a :%y*<CR>
 
 " Paste from windows clipboard
 nmap <Leader>v "*P
+vmap <Leader>v "*P
 
-" Copy to windows clipboad
+" Copy to windows clipboard
 nmap <Leader>c "*y
 vmap <Leader>c "*y
