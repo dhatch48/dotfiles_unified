@@ -61,9 +61,9 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -141,6 +141,21 @@ export winhome='/cygdrive/d/Users/david'
 
 export PS1='\w\n\u@\h\$ '
 
+# GREP_COLOR codes
+# Attributes:   Text color:    Background:
+#   0 reset all   30 black       40 black
+#   1 bright      31 red         41 red
+#   2 dim         32 green       42 green
+#   4 underscore  33 yellow      43 yellow
+#   5 blink       34 blue        44 blue
+#   7 reverse     35 purple      45 purple
+#   8 hidden      36 cyan        46 cyan
+#                 37 white       47 white
+# Separate with ";"
+#
+export GREP_COLOR="30;46"
+
+# Specify options grep should use by default
 export GREP_OPTIONS="--color=auto"
 
 extract () {
