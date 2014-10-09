@@ -85,6 +85,8 @@ alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
 alias gs='git status'
 
+# Show bash keybindings
+alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
 
 alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
 
@@ -128,7 +130,7 @@ export PATH="/user/local/bin:/usr/local/sbin:$PATH"
 export HISTSIZE=1000				    	# 500 is default
 export HISTTIMEFORMAT='%b %d %I:%M %p '		# using strftime
 export HISTCONTROL=ignoreboth:erasedups		# ignoredups:ignorespace
-export HISTIGNORE="fg:history:history -d*:h:h -d*:pwd:exit:df:ll:ls:man *:"
+export HISTIGNORE="fg:delHistory*:history:history -d*:h:h -d*:pwd:exit:df:ll:ls:man *:"
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -158,6 +160,17 @@ export GREP_COLOR="30;46"
 
 # Specify options grep should use by default
 export GREP_OPTIONS="--color=auto"
+
+# Use vi key bindings instead of emacs
+set -o vi
+bind -m vi-command ".":insert-last-argument
+bind -m vi-command "gg":beginning-of-history
+bind -m vi-command "G":end-of-history
+bind -m vi-insert "\C-l.":clear-screen
+bind -m vi-insert "\C-a.":beginning-of-line
+bind -m vi-insert "\C-e.":end-of-line
+bind -m vi-insert "\C-w.":backward-kill-word
+#bind -m vi-insert "jk":vi-movement-mode
 
 extract () {
     if [ -f $1 ] ; then
