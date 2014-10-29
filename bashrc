@@ -125,7 +125,7 @@ export MYNAME
 
 # or set it and export it in same line
 export LESS='-M'
-export PATH="/user/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export HISTSIZE=1000				    	# 500 is default
 export HISTTIMEFORMAT='%b %d %I:%M %p '		# using strftime
