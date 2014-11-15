@@ -79,7 +79,6 @@ alias df='df -h'
 alias du='du -h'
 alias h='history'
 alias up='cd ..'
-alias stat='stat -x'
 alias tart='tar -tzvf'   # List file in archive
 alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
