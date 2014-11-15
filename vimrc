@@ -159,7 +159,7 @@ vnoremap / /\v
 cnoremap %s/ %smagic/\v
 
 " Substitute command colon separated shortcut
-noremap ;; :%s:\v::g<Left><Left><Left>
+noremap ;; :s:\v::g<Left><Left><Left>
 noremap ;' :%s:\v::cg<Left><Left><Left><Left>
 
 " Edit and sourc vimrc file
@@ -197,3 +197,8 @@ vmap <Leader>v "*P
 " Copy to windows clipboard
 nmap <Leader>c "*y
 vmap <Leader>c "*y
+
+" Find and replace in multiple files using arglist
+":args `grep -l findme application/`
+":argdo %s/findme/replacement/gc
+":argdo update 
