@@ -187,6 +187,9 @@ nnoremap <f2> :NERDTreeToggle<CR>
 " run php on current buffer
 nnoremap <f3> :!php `cygpath -w %` <CR>
 
+" Convert default unix LF Fileformat to dos CR/LF
+nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
+
 " Yank whole file to windows clipboard
 nmap <Leader>a :%y*<CR>
 
