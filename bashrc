@@ -93,6 +93,13 @@ alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# Todo.txt stuff
+alias t='todo.sh -d $HOME/.todo.cfg'
+export TODOTXT_DEFAULT_ACTION=ls
+# Turns auto archive off
+export TODOTXT_AUTO_ARCHIVE=0
+complete -F _todo t
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -130,7 +137,7 @@ export PATH="$HOME/bin:$PATH"
 export HISTSIZE=1000				    	# 500 is default
 export HISTTIMEFORMAT='%b %d %I:%M %p '		# using strftime
 export HISTCONTROL=ignoreboth:erasedups		# ignoredups:ignorespace
-export HISTIGNORE="fg:delHistory*:history:history -d*:h:h -d*:pwd:exit:df:ll:ls:man *:"
+export HISTIGNORE="t *:fg:delHistory*:history:history -d*:h:h -d*:pwd:exit:df:ll:ls:man *:"
 # append to the history file, don't overwrite it
 shopt -s histappend
 
