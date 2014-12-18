@@ -61,9 +61,9 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -167,7 +167,7 @@ export PS1='\w\n\u@\h\$ '
 export GREP_COLOR="30;46"
 
 # Specify options grep should use by default
-export GREP_OPTIONS="--color=auto"
+#export GREP_OPTIONS="--color=auto"
 
 # Use vi key bindings instead of emacs
 set -o vi
