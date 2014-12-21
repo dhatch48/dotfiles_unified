@@ -84,6 +84,7 @@ alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
 alias gs='git status'
 alias open='cygstart'   # mac-like open
+alias less='less -MRS'
 
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
@@ -131,7 +132,6 @@ MYNAME='David Hatch'
 export MYNAME
 
 # or set it and export it in same line
-export LESS='-M'
 #export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
@@ -164,7 +164,7 @@ export PS1='\w\n\u@\h\$ '
 #                 37 white       47 white
 # Separate with ";"
 #
-export GREP_COLOR="30;46"
+export GREP_COLOR="31;40"
 
 # Specify options grep should use by default
 #export GREP_OPTIONS="--color=auto"
