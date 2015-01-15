@@ -148,7 +148,7 @@ shopt -s histappend
 
 export unified='/cygdrive/d/wamp/www/unified/'
 export modeltools='/cygdrive/d/wamp/www/unified/tools'
-export winhome='/cygdrive/d/Users/david'
+export winhome=$(cygpath -H)/$USER
 
 export PS1='\w\n\u@\h\$ '
 
@@ -164,7 +164,7 @@ export PS1='\w\n\u@\h\$ '
 #                 37 white       47 white
 # Separate with ";"
 #
-export GREP_COLOR="31;40"
+export GREP_COLOR="34;40"
 
 # Specify options grep should use by default
 #export GREP_OPTIONS="--color=auto"
@@ -174,6 +174,7 @@ set -o vi
 bind -m vi-command ".":insert-last-argument
 bind -m vi-command "gg":beginning-of-history
 bind -m vi-command "G":end-of-history
+bind -m vi-command "u":undo
 bind -m vi-insert "\C-l.":clear-screen
 bind -m vi-insert "\C-a.":beginning-of-line
 bind -m vi-insert "\C-e.":end-of-line
@@ -217,8 +218,13 @@ export -f delHistory
 #find . -name "Thumbs.db" -print0 | xargs -0 rm
 # Explanation 
 # find in current dir and below the name in quotes and print it ending with
-# null... -0 tells xargs that args are null seperated and removes each file
+# null... -0 tells xargs that args are null separated and removes each file
 
+# Search in files for multiple patterns on different lines (logical AND)
+#fgrep -lZ 'R/Name(Dark)' *.ai | xargs -0 fgrep -lz 'NumLayers: 3'
+# Explanation
+# -lZ outputs filenames null delimited. -z (lower) reads input null delimited
+# instead of newline
 
 
 #File Permissions: Octal Notation
