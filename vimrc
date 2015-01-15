@@ -131,7 +131,7 @@ set laststatus=2    "To display the status line always
 set so=7
 
 " Sets how many lines of history VIM has to remember
-set history=50  " default 20
+set history=100  " default 20
 
 " For regular expressions turn magic on
 set magic   " Magic on should be default but to make sure
@@ -200,6 +200,10 @@ vmap <Leader>v "*P
 " Copy to windows clipboard
 nmap <Leader>c "*y
 vmap <Leader>c "*y
+
+" Undo/Redo chronologically regardless of undo branching
+nnoremap <Leader>u :earlier<CR>
+nnoremap <Leader>r :later<CR>
 
 " Find and replace in multiple files using arglist
 ":args `grep -l findme application/`
