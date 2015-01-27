@@ -117,6 +117,9 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
 echo ""
 echo -n "Welcome to Cigwin, "; whoami
 echo ""
