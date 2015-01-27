@@ -10,6 +10,8 @@ FontIsBold=no
 FontSmoothing=none
 Transparency=off
 Term=xterm
+BellSound=yes
+BellFlash=no
 
 # Argonaut
 #ForegroundColour=#fffaf4
