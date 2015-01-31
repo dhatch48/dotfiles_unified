@@ -70,6 +70,8 @@ fi
 alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
+# list and sort by creation date
+alias lc="stat -c '%w    %n' * | sort -k1r"
 
 # can also redefine a command to change default options
 alias mv='mv -i'
