@@ -153,7 +153,7 @@ shopt -s histappend
 
 export unified='/cygdrive/d/wamp/www/unified/'
 export modeltools='/cygdrive/d/wamp/www/unified/tools'
-export winhome=$(cygpath -H)/$USER
+export winhome="$(cygpath -H)/$USER"
 
 export PS1='\w\n\u@\h\$ '
 
