@@ -150,6 +150,8 @@ shopt -s histappend
 # Save and reload the history after each command finishes
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+# Chages default file permissions from umask 022 (-rwxr-xr-x)
+umask 027
 
 export unified='/cygdrive/d/wamp/www/unified/'
 export modeltools='/cygdrive/d/wamp/www/unified/tools'
