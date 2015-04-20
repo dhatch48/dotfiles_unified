@@ -87,6 +87,7 @@ alias tarx='tar -xzvf'   # unarchive and ungzip
 alias gs='git status'
 alias open='cygstart'   # mac-like open
 alias less='less -MRS'
+alias svns='svn stat -u'
 
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
