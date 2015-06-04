@@ -88,6 +88,7 @@ alias gs='git status'
 alias open='cygstart'   # mac-like open
 alias less='less -MRS'
 alias svns='svn stat -u'
+alias st="$HOME/bin/start_tmux.sh"
 
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
