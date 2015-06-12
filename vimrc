@@ -10,11 +10,11 @@ let mapleader=' '
 "set spell spelllang=en_us
 
 " the anonymous register is aliased to the * register - it represents the
-" windows clipboard.
+" system clipboard.
 " With this set, whatever is yanked or deleted in vim to the default
 " register(") will also be stored in *reg. Without, it won't store to the
-" windows clipboard, you will have to manually yank to * so you can paste
-" outside of vim. See keybindings about windows clipboard near end of file.
+" system clipboard, you will have to manually yank to * so you can paste
+" outside of vim. See keybindings about system clipboard near end of file.
 "set clipboard=unnamed
 
 
@@ -82,6 +82,7 @@ set formatoptions=c,q,r,t " This is a sequence of letters which describes how
                     "           after hitting <Enter> in Insert mode. 
                     " t         Auto-wrap text using textwidth (does not apply
                     "           to comments)
+                    " n         recognize numbered lists
  
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
@@ -156,7 +157,7 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-" Substitute command in "very magic" mode by adding \v
+" Substitute command in "very magic" mode by adding \v aka grep extended
 nnoremap / /\v
 vnoremap / /\v
 cnoremap %s/ %smagic/\v
@@ -196,15 +197,15 @@ nnoremap <f3> :!php `cygpath -w %` <CR>
 " Convert default unix LF Fileformat to dos CR/LF
 nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
 
-" Yank whole file to windows clipboard
+" Yank whole file to system clipboard
 nmap <Leader>a :%y*<CR>
 
-" Paste from windows clipboard
+" Paste from system clipboard
 nmap <Leader>v "*P
 vmap <Leader>v "*P
 
-" Copy to windows clipboard
-nmap <Leader>c "*y
+" Copy to system clipboard
+nmap <Leader>c "*Y
 vmap <Leader>c "*y
 
 " Undo/Redo chronologically regardless of undo branching
