@@ -2,12 +2,13 @@ BoldAsFont=no
 RightClickAction=paste
 Rows=50
 Columns=80
-Font=Courier New
-FontHeight=12
+#Font=Courier New
+Font=DejaVu Sans Mono
+FontHeight=11
 CursorType=block
 ForegroundColour=0,204,0
 FontIsBold=no
-FontSmoothing=none
+FontSmoothing=default
 Transparency=off
 Term=xterm
 BellSound=yes
@@ -31,7 +32,8 @@ BoldGreen=#abe15b
 BoldYellow=#ffd242
 BoldBlue=#0092ff
 BoldMagenta=#9a5feb
-BoldCyan=#67fff0
+#BoldCyan=#67fff0
+BoldCyan=#44e8f0
 BoldWhite=#ffffff
 
 # Defaults
