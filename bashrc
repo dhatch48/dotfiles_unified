@@ -231,6 +231,9 @@ export -f delHistory
 # find in current dir and below the name in quotes and print it ending with
 # null... -0 tells xargs that args are null separated and removes each file
 
+# Search and copy files
+#find . -iname "*foobar*" -exec cp '{}' ~/foo/bar \;
+
 # Search in files for multiple patterns on different lines (logical AND)
 #fgrep -lZ 'R/Name(Dark)' *.ai | xargs -0 fgrep -lz 'NumLayers: 3'
 # Explanation
