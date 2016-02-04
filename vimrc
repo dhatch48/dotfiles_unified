@@ -194,8 +194,14 @@ nnoremap <f2> :NERDTreeToggle<CR>
 " run php on current buffer
 nnoremap <f3> :!php `cygpath -w %` <CR>
 
+" run python3 on current buffer
+nnoremap <f5> :!python3 % <CR>
+
 " Convert default unix LF Fileformat to dos CR/LF
 nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
+
+" Convert tabs to space
+nnoremap <f6> :retab <CR>
 
 " Yank whole file to system clipboard
 nmap <Leader>a :%y*<CR>
@@ -208,6 +214,8 @@ vmap <Leader>v "*P
 nmap <Leader>c "*Y
 vmap <Leader>c "*y
 
+" Copy to clipboard current file path
+nmap <Leader>fp :let @* = expand("%")<CR>
 " Undo/Redo chronologically regardless of undo branching
 "nnoremap <Leader>u :earlier<CR>
 "nnoremap <Leader>r :later<CR>
