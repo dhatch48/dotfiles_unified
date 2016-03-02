@@ -10,7 +10,8 @@ ForegroundColour=0,204,0
 FontIsBold=no
 FontSmoothing=default
 Transparency=off
-Term=xterm
+#Term=xterm
+Term=xterm-256color
 BellSound=yes
 BellFlash=no
 
