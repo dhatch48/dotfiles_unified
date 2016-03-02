@@ -200,7 +200,7 @@ cnoremap %s/ %smagic/\v
 noremap <Leader>; :s:\v::g<Left><Left><Left>
 noremap <Leader>' :%s:\v::g<Left><Left><Left>
 
-" Edit and sourc vimrc file
+" Edit and source vimrc file
 nnoremap <Leader>ev :vs $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
