@@ -18,6 +18,7 @@ Plugin 'ctrlpvim/ctrlp.vim'   " fuzzy find files
 Plugin 'scrooloose/nerdtree'  " file drawer, open with :NERDTreeToggle
 Plugin 'scrooloose/syntastic' " syntax checking plugin for Vim.
 Plugin 'tpope/vim-fugitive'   " Ultimate Git helper
+Plugin 'airblade/vim-gitgutter' " shows a git diff in the gutter 
 "Plugin 'bling/vim-airline'
 "Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 "Bundle 'joonty/vdebug.git'
