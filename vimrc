@@ -19,7 +19,8 @@ Plugin 'scrooloose/nerdtree'  " file drawer, open with :NERDTreeToggle
 Plugin 'scrooloose/syntastic' " syntax checking plugin for Vim.
 Plugin 'tpope/vim-fugitive'   " Ultimate Git helper
 Plugin 'airblade/vim-gitgutter' " shows a git diff in the gutter 
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 "Bundle 'joonty/vdebug.git'
 
@@ -163,7 +164,7 @@ set timeoutlen=500
 set cursorline
 
 " set cursorline colors
-highlight cursorline term=bold cterm=NONE ctermbg=darkgrey ctermfg=none
+highlight cursorline term=bold cterm=NONE ctermbg=235 ctermfg=none
 
 " set color of number column on cursorline
 highlight cursorlinenr ctermbg=235 ctermfg=white
@@ -258,3 +259,34 @@ nmap <Leader>fp :let @* = expand("%")<CR>
 ":args `grep -l findme application/`
 ":argdo %s/findme/replacement/gc
 ":argdo update 
+
+"""""""""""""""""""""""""""""""""""""""
+" airline
+"""""""""""""""""""""""""""""""""""""""
+
+" need it for airline symbols
+set encoding=utf-8
+
+" airline settings
+let g:airline#extensions#syntastic#enabled=1
+let g:airline_powerline_fonts=1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = ''
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'ξ'
+"let g:airline_theme='solarized'
+
