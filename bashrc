@@ -130,9 +130,7 @@ echo ""
 echo -n "Today is "; date "+%m-%d-%Y %H:%M:%S"
 echo ""
 cal
-#echo -n "Uptime: "; uptime
-echo ""
-echo "to edit,     'nano .bashrc'"
+echo -n "Uptime: "; uptime
 echo ""
 
 MYNAME='David Hatch'
