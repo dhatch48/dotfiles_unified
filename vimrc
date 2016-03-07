@@ -19,7 +19,7 @@ Plugin 'scrooloose/nerdtree'  " file drawer, open with :NERDTreeToggle
 Plugin 'scrooloose/syntastic' " syntax checking plugin for Vim.
 Plugin 'tpope/vim-fugitive'   " Ultimate Git helper
 Plugin 'airblade/vim-gitgutter' " shows a git diff in the gutter 
-Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'    " Pretty vim status bar
 Plugin 'vim-airline/vim-airline-themes'
 "Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 "Bundle 'joonty/vdebug.git'
@@ -68,10 +68,15 @@ set smarttab        " When on, a <Tab> in front of a line inserts blanks
  
 set showcmd         " Show (partial) command in status line.
 
+set showmode        " Display the mode you're in.
+
+set wildmenu        " Enhanced command line completion.
+
+set wildmode=list:longest         " Complete files like a shell.
+
 set number          " Show line numbers.
 
 set relativenumber  " Show relative numbers
-
 
 set showmatch       " When a bracket is inserted, briefly jump to the matching
                     " one. The jump is only done if the match can be seen on the
@@ -164,7 +169,7 @@ set timeoutlen=500
 set cursorline
 
 " set cursorline colors
-highlight cursorline term=bold cterm=NONE ctermbg=235 ctermfg=none
+highlight cursorline term=bold cterm=NONE ctermbg=236 ctermfg=none
 
 " set color of number column on cursorline
 highlight cursorlinenr ctermbg=235 ctermfg=white
@@ -191,6 +196,12 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
+
+" Save files faster
+nnoremap <Leader>w :w<CR>
+
+" turn off search highlight
+nnoremap <leader>l :nohlsearch<CR>
 
 " Substitute command in "very magic" mode by adding \v aka grep extended
 nnoremap / /\v
