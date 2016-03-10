@@ -223,6 +223,11 @@ delHistory() {
 }
 export -f delHistory
 
+path() {
+    echo $PATH | sed 's/\:/\n/g'
+}
+export -f path
+
 # Recursively remove files
 #find . -name "Thumbs.db" -print0 | xargs -0 rm
 # Explanation 
