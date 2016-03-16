@@ -25,6 +25,7 @@ Plugin 'xolox/vim-misc'       " Required by easytags.
 Plugin 'xolox/vim-easytags'   " Automated tag file generation and syntax highlighting of tags
 Plugin 'godlygeek/tabular'    " Easy formatting to the same column width
 Plugin 'tpope/vim-surround'   " Easily add/change surroundings
+Plugin 'scrooloose/nerdcommenter'  " Comment whatever
 
 "Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 "Bundle 'joonty/vdebug.git'
