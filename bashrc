@@ -70,6 +70,7 @@ fi
 alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
+alias lt='ls -alht' # Sort by mod date
 # list and sort by creation date
 alias lc="stat -c '%w    %n' * | sort -k1r"
 
@@ -84,12 +85,17 @@ alias up='cd ..'
 alias tart='tar -tzvf'   # List file in archive
 alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
-alias gs='git status'
 alias open='cygstart'   # mac-like open
 alias less='less -MRS'
 alias svns='svn stat -u'
 alias st="$HOME/bin/start_tmux.sh"
 alias getVundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gdiff='git diff'
 
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
