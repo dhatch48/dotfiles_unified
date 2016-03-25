@@ -89,6 +89,7 @@ alias open='cygstart'   # mac-like open
 alias less='less -MRS'
 alias svns='svn stat -u'
 alias st="$HOME/bin/start_tmux.sh"
+alias getVundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
