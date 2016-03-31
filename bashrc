@@ -92,10 +92,10 @@ alias st="$HOME/bin/start_tmux.sh"
 alias getVundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
 # Git aliases
-alias gs='git status'
+alias g='git status'
 alias ga='git add'
-alias gc='git commit'
-alias gdiff='git diff'
+alias gc='git commit -v'
+alias gd='git diff'
 
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
