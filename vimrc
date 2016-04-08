@@ -204,7 +204,10 @@ nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
 " Save files faster
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
+
+" Save As ...  See help expand for modifiers like :h
+nnoremap <Leader>sa :w %:h/
 
 " turn off search highlight
 nnoremap <leader>l :nohlsearch<CR>
@@ -253,7 +256,7 @@ nnoremap <f5> :!python3 % <CR>
 nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
 
 " Convert tabs to space
-nnoremap <f6> :retab <CR>
+noremap <f6> :retab <CR>
 
 " Yank whole file to system clipboard
 nmap <Leader>a :%y*<CR>
@@ -268,6 +271,10 @@ vmap <Leader>c "*y
 
 " Copy to clipboard current file path
 nmap <Leader>fp :let @* = expand("%")<CR>
+
+" Open command-line window for editing comman history or search history.
+" Use: q: or q/ respectively
+" Or press CTRL-F in command or search mode to switch to it
 
 " Undo/Redo chronologically regardless of undo branching
 "nnoremap <Leader>u :earlier<CR>
