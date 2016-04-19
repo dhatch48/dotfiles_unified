@@ -132,7 +132,7 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
 echo ""
-echo -n "Welcome to Cigwin, "; whoami
+echo -n "Welcome to $OSTYPE, "; whoami
 echo ""
 echo -n "Today is "; date "+%m-%d-%Y %H:%M:%S"
 echo ""
