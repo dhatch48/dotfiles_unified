@@ -190,7 +190,7 @@ highlight linenr term=bold cterm=none ctermfg=darkgrey ctermbg=none gui=none gui
 
 let mapleader=' '   " Set leader key to space
 
-imap jk <Esc>
+inoremap jk <Esc>
 
 " Window moving
 nmap <silent> <C-Up> :wincmd k<CR>
