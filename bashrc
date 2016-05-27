@@ -73,6 +73,7 @@ alias l='ls -CF'
 alias lt='ls -alht' # Sort by mod date
 # list and sort by creation date
 alias lc="stat -c '%w    %n' * | sort -k1r"
+alias lad='ls -d */'
 
 # can also redefine a command to change default options
 alias mv='mv -i'
