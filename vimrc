@@ -236,7 +236,7 @@ vnoremap <Leader>cl mz:s/^\s*\zs\ze/\/\/<cr>'z
 vnoremap <Leader>ul mzV:s/\%V\(\s*\)\/\//\1<cr>'z
 
 " Insert php var_dump() and die() for debugging
-noremap <Leader>d ovar_dump();die('here');k0f(a
+noremap <Leader>d oecho '<pre>';var_dump();echo '</pre>';die('here');kk0f(a
 
 " Add getter and setters for properties
 nnoremap <f1> 0/private\<bar>protected\<bar>publicww"zywjmqGo?}dGopublic function set "zpbhx~A($"zpA){	$this->"zpA = $"zpA;return $this;}<<oo	public function get "zpbhx~A(){	return $this->"zpA;}}V(((((='q
