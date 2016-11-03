@@ -102,6 +102,9 @@ alias gd='git diff'
 alias gu='git remote update'
 alias gsi='git status --ignored'
 alias gl='git log'
+alias gch='git checkout'
+alias gchb='git checkout -b'
+alias gca='git commit --amend'
 
 # Git log options found here: https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-log
 # git log -n <limit>
