@@ -200,6 +200,7 @@ shopt -s histappend
 # Chages default file permissions from umask 022 (-rwxr-xr-x)
 umask 027
 
+export EDITOR=vim
 export unified='/cygdrive/d/wamp/www/unified/'
 export modeltools='/cygdrive/d/wamp/www/unified/tools'
 export winhome="$(cygpath -H)/$USER"
