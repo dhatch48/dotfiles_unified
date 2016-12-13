@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline-themes' " Theme for airline
 Plugin 'godlygeek/tabular'    " Easy formatting to the same column width
 Plugin 'tpope/vim-surround'   " Easily add/change surroundings
 Plugin 'scrooloose/nerdcommenter'  " Comment whatever
+Plugin 'skwp/greplace.vim'    " Simple grep and replace in quickfix window
 
 "Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 "Bundle 'joonty/vdebug.git'
@@ -321,3 +322,5 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'ξ'
 "let g:airline_theme='solarized'
 
+" Turn on globstar for external vim commands
+set shell+=\ -O\ globstar
