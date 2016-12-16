@@ -221,6 +221,10 @@ nnoremap / /\v
 vnoremap / /\v
 cnoremap %s/ %smagic/\v
 
+" New files
+nnoremap <Leader>n :new<CR>
+nnoremap <Leader>nv :vnew<CR>
+
 " Substitute command colon separated shortcut
 noremap <Leader>; :s:\v::g<Left><Left><Left>
 noremap <Leader>' :%s:\v::g<Left><Left><Left>
@@ -264,6 +268,14 @@ nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
 
 " Convert tabs to space
 noremap <f6> :retab <CR>
+
+" Sort a list of words
+vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+nnoremap <leader>ss :execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+
+" Unjoin lines
+vnoremap <leader>uj :'<,'>s/ /\r/g <CR>
+noremap <leader>uj :s/ /\r/g <CR>
 
 " Yank whole file to system clipboard
 nmap <Leader>a :%y*<CR>
