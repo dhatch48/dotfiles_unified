@@ -137,7 +137,7 @@ set background=dark " When set to "dark", Vim will try to use colors that look
  
 set mouse=a         " Enable the use of the mouse.
 
-set directory=/tmp  " By setting the 'directory' option you can place the swap
+set directory=~/tmp,/var/tmp,/tmp  " By setting the 'directory' option you can place the swap
                     " file in another place than where the edited file is.
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
