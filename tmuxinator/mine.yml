@@ -32,17 +32,20 @@ root: ~/
 
 windows:
   - bash:
-      layout: even-horizontal
+      #layout: even-horizontal
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
-      panes:
-        -
-        - vim
   - remote:
-      - ssh hl
-      - clear
-      - g
+      layout: eb4f,237x66,0,0[237x57,0,0,1,237x8,0,58,4]
+      panes:
+          - dev:
+              - ssh hl
+              - clear
+              - g
+          - log: 
+              - ssh hl
+              - tail -f ~/logs/php_error.log
   - dev: 
       - cd $unified
       - cd ../hldev/wp-content
