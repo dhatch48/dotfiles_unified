@@ -228,15 +228,15 @@ export GREP_COLOR="34;40"
 #export GREP_OPTIONS="--color=auto"
 
 # Use vi key bindings instead of emacs
-set -o vi
-bind -m vi-command ".":insert-last-argument
-bind -m vi-command "gg":beginning-of-history
-bind -m vi-command "G":end-of-history
-bind -m vi-command "u":undo
-bind -m vi-insert "\C-l.":clear-screen
-bind -m vi-insert "\C-a.":beginning-of-line
-bind -m vi-insert "\C-e.":end-of-line
-bind -m vi-insert "\C-w.":backward-kill-word
+#set -o vi
+#bind -m vi-command ".":insert-last-argument
+#bind -m vi-command "gg":beginning-of-history
+#bind -m vi-command "G":end-of-history
+#bind -m vi-command "u":undo
+#bind -m vi-insert "\C-l.":clear-screen
+#bind -m vi-insert "\C-a.":beginning-of-line
+#bind -m vi-insert "\C-e.":end-of-line
+#bind -m vi-insert "\C-w.":backward-kill-word
 #bind -m vi-insert "jk":vi-movement-mode
 
 extract () {
