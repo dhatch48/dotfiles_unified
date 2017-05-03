@@ -251,8 +251,6 @@ noremap <Leader>d oecho '<pre>';var_dump();echo '</pre>';die('here');kk0f(a
 " Add getter and setters for properties
 nnoremap <f1> 0/private\<bar>protected\<bar>publicww"zywjmqGo?}dGopublic function set "zpbhx~A($"zpA){	$this->"zpA = $"zpA;return $this;}<<oo	public function get "zpbhx~A(){	return $this->"zpA;}}V(((((='q
 
-"map <f5> :!php 'd:\wamp\www\unified\tools\illustratorimport.php' <CR>
-
 " Shortcut for nerdTree
 nnoremap <f2> :NERDTreeToggle<CR>
 
@@ -263,16 +261,19 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <f3> :!php `cygpath -w %` <CR>
 
 " run python3 on current buffer
-nnoremap <f5> :!python3 % <CR>
+nnoremap <f4> :!python3 % <CR>
 
-" Convert default unix LF Fileformat to dos CR/LF
-nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
+" Convert dos to unix
+nnoremap <f5> :update <bar> :e ++ff=dos <bar> :setlocal ff=unix <CR>
 
-" Remove trailing whitespace
-nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+" Convert unix LF Fileformat to dos CR/LF
+nnoremap <f6> :update <bar> e ++ff=dos <CR>
 
 " Convert tabs to space
-noremap <f6> :retab <CR>
+nnoremap <f7> :retab <CR>
+
+" Remove trailing whitespace
+nnoremap <silent> <f8> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Sort a list of words
 vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
