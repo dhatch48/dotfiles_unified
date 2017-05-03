@@ -268,6 +268,9 @@ nnoremap <f5> :!python3 % <CR>
 " Convert default unix LF Fileformat to dos CR/LF
 nnoremap <f4> :update <bar> e ++ff=dos <bar> w <CR>
 
+" Remove trailing whitespace
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
 " Convert tabs to space
 noremap <f6> :retab <CR>
 
