@@ -90,7 +90,7 @@ set showmatch       " When a bracket is inserted, briefly jump to the matching
                     " screen. The time to show the match can be set with
                     " 'matchtime'.
  
-"set hlsearch        " When there is a previous search pattern, highlight all
+set hlsearch        " When there is a previous search pattern, highlight all
                     " its matches.
  
 set incsearch       " While typing a search command, show immediately where the
@@ -177,6 +177,8 @@ set timeoutlen=500
 "set ttimeoutlen=0
 
 set cursorline
+
+set pastetoggle=<F10>
 
 " set cursorline colors
 highlight cursorline term=bold cterm=NONE ctermbg=236 ctermfg=none
