@@ -76,23 +76,27 @@ alias lc="stat -c '%w    %n' * | sort -k1r"
 alias lad='ls -d */'
 
 # can also redefine a command to change default options
+if [ -e /usr/bin/vimx ]; then
+    alias vim='/usr/bin/vimx'
+fi
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
 alias df='df -h'
 alias du='du -h'
 alias h='history'
-alias up='cd ..'
 alias tart='tar -tzvf'   # List file in archive
 alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
-alias open='cygstart'   # mac-like open
 alias less='less -MRS'
 alias svns='svn stat -u'
-alias st="$HOME/bin/start_tmux.sh"
+alias st="tmux attach-session || tmuxinator start mine"
 alias getVundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 alias findswap="find . -iname '*.swp'"
 alias rmswap="find . -iname '*.swp' -print0 | xargs -0 rm"
+# Show bash keybindings
+alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
+
 
 # Git aliases
 alias g='git status'
@@ -137,15 +141,6 @@ alias gca='git commit --amend'
 # git log -p <file>
 # Mix and match - show the patch(diff) of every commit of this file.
 
-# Show bash keybindings
-alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
-
-alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Todo.txt stuff
 alias t='todo.sh -d $HOME/.todo.cfg'
 complete -F _todo t
@@ -180,9 +175,6 @@ cal
 echo -n "Uptime: "; uptime
 echo ""
 
-MYNAME='David Hatch'
-export MYNAME
-
 # or set it and export it in same line
 #export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
@@ -198,13 +190,18 @@ shopt -s globstar   # Turn on **
 # Save and reload the history after each command finishes
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# Chages default file permissions from umask 022 (-rwxr-xr-x)
-umask 027
-
 export EDITOR=vim
-export unified='/cygdrive/d/wamp/www/unified/'
-export modeltools='/cygdrive/d/wamp/www/unified/tools'
-export winhome="$(cygpath -H)/$USER"
+
+if [ "$OSTYPE" = "cygwin" ]; then
+    # Chages default file permissions from umask 022 (-rwxr-xr-x)
+    umask 027
+
+    alias open='cygstart'   # mac-like open
+    alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
+    export unified='/cygdrive/d/wamp/www/unified/'
+    export modeltools='/cygdrive/d/wamp/www/unified/tools'
+    export winhome="$(cygpath -H)/$USER"
+fi
 
 export PS1='\w\n\u@\h\$ '
 
