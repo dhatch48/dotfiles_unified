@@ -258,7 +258,11 @@ nnoremap <f2> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 
 " run php on current buffer
-nnoremap <f3> :!php `cygpath -w %` <CR>
+if $OS == 'Windows_NT'
+    nnoremap <f3> :!php `cygpath -w %` <CR>
+else
+    nnoremap <f3> :!php % <CR>
+endif
 
 " run python3 on current buffer
 nnoremap <f4> :!python3 % <CR>
@@ -267,7 +271,7 @@ nnoremap <f4> :!python3 % <CR>
 nnoremap <f5> :update <bar> :e ++ff=dos <bar> :setlocal ff=unix <CR>
 
 " Convert unix LF Fileformat to dos CR/LF
-nnoremap <f6> :update <bar> e ++ff=dos <CR>
+nnoremap <f6> :update <bar> :e ++ff=dos <CR>
 
 " Convert tabs to space
 nnoremap <f7> :retab <CR>
