@@ -41,6 +41,7 @@ windows:
       panes:
           - dev:
               - ssh hl
+              - cd $wpcontent
               - clear
               - g
           - log: 
