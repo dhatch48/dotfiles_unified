@@ -291,12 +291,13 @@ noremap <leader>uj :s/ /\r/g <CR>
 nmap <Leader>a :%y*<CR>
 
 " Paste from system clipboard
-nmap <Leader>v "*P
-vmap <Leader>v "*P
+nnoremap <Leader>v "*P
+vnoremap <Leader>v "*P
+inoremap <Leader>v <C-r><C-p>*
 
 " Copy to system clipboard
-nmap <Leader>c "*Y
-vmap <Leader>c "*y
+nnoremap <Leader>c "*Y
+vnoremap <Leader>c "*y
 
 " Copy to clipboard current file path
 nmap <Leader>fp :let @* = expand("%")<CR>
