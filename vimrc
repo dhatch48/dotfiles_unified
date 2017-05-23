@@ -293,7 +293,7 @@ nmap <Leader>a :%y*<CR>
 " Paste from system clipboard
 nnoremap <Leader>v "*P
 vnoremap <Leader>v "*P
-inoremap <Leader>v <C-r><C-p>*
+"inoremap <Leader>v <C-r><C-p>*
 
 " Copy to system clipboard
 nnoremap <Leader>c "*Y
