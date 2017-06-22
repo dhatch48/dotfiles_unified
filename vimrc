@@ -136,6 +136,7 @@ set background=dark " When set to "dark", Vim will try to use colors that look
                     " Any other value is illegal.
  
 set mouse=a         " Enable the use of the mouse.
+set ttymouse=xterm2
 
 set directory=~/tmp,/var/tmp,/tmp  " By setting the 'directory' option you can place the swap
                     " file in another place than where the edited file is.
