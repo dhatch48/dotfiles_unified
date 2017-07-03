@@ -274,11 +274,14 @@ nnoremap <f5> :update <bar> :e ++ff=dos <bar> :setlocal ff=unix <CR>
 " Convert unix LF Fileformat to dos CR/LF
 nnoremap <f6> :update <bar> :e ++ff=dos <CR>
 
-" Convert tabs to space
-nnoremap <f7> :retab <CR>
+" Toggle on/off spell checker
+nnoremap <f7> :setlocal spell! spelllang=en_us <CR> 
 
 " Remove trailing whitespace
 nnoremap <silent> <f8> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" Convert tabs to space
+nnoremap <f9> :retab <CR>
 
 " Sort a list of words
 vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
