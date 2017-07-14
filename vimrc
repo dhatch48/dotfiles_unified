@@ -288,8 +288,8 @@ vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<C
 nnoremap <leader>ss :execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 
 " Unjoin lines
-vnoremap <leader>uj :'<,'>s/ /\r/g <CR>
-noremap <leader>uj :s/ /\r/g <CR>
+vnoremap <leader>uj :'<,'>s/ /\r/g <Bar> :nohl <CR>
+noremap <leader>uj :s/ /\r/g <Bar> :nohl  <CR>
 
 " Yank whole file to system clipboard
 nmap <Leader>a :%y*<CR>
@@ -302,6 +302,9 @@ vnoremap <Leader>v "*P
 " Copy to system clipboard
 nnoremap <Leader>c "*Y
 vnoremap <Leader>c "*y
+
+" Yank line w/o line return to clipboard
+nnoremap yil ^vg_"*y
 
 " Copy to clipboard current file path
 nmap <Leader>fp :let @* = expand("%")<CR>
