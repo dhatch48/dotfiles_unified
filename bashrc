@@ -175,10 +175,12 @@ cal
 echo -n "Uptime: "; uptime
 echo ""
 
-# or set it and export it in same line
-#export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
+# Avoid path duplicates when tmux loads
+if [ -z "${TMUX}" ]; then
+    export PATH="$HOME/bin:/usr/sbin:$PATH"
+fi
 
+# or set it and export it in same line
 export HISTSIZE=1000				    	# 500 is default
 export HISTTIMEFORMAT='%b %d %I:%M %p '		# using strftime
 export HISTCONTROL=ignoreboth:erasedups		# ignoredups:ignorespace
@@ -274,7 +276,7 @@ delHistory () {
 export -f delHistory
 
 path () {
-    echo $PATH | sed 's/\:/\n/g'
+    tr : '\n' <<< $PATH
 }
 export -f path
 
