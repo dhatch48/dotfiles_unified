@@ -90,7 +90,7 @@ alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
 alias less='less -iMRS'
 alias svns='svn stat -u'
-alias st="tmux attach-session || tmuxinator start mine"
+alias st="tmux attach-session || tmuxinator start mine || tmux"
 alias getVundle="git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 alias findswap="find . -iname '*.swp'"
 alias rmswap="find . -iname '*.swp' -print0 | xargs -0 rm"
@@ -109,6 +109,7 @@ alias gl='git log'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gca='git commit --amend'
+alias gp='git push'
 
 # Git log options found here: https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-log
 # git log -n <limit>
