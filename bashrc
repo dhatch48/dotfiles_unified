@@ -195,6 +195,9 @@ shopt -s globstar   # Turn on **
 
 export EDITOR=vim
 
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 if [ "$OSTYPE" = "cygwin" ]; then
     # Chages default file permissions from umask 022 (-rwxr-xr-x)
     umask 027
