@@ -164,8 +164,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-bind "set completion-ignore-case on"
-bind "set show-all-if-ambiguous on"
 
 echo ""
 echo -n "Welcome to bash on $OSTYPE, "; whoami
@@ -239,6 +237,12 @@ export GREP_COLOR="34;40"
 # Specify options grep should use by default
 #export GREP_OPTIONS="--color=auto"
 
+##############################
+# Readline options
+##############################
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
 # Up/Down arrow for filtered history search
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -246,6 +250,7 @@ bind '"\e[B": history-search-forward'
 # Ctrl+left/right arrow
 bind '"\e[1;5D": backward-word'
 bind '"\e[1;5C": forward-word'
+##############################
 
 # Use vi key bindings instead of emacs
 #set -o vi
