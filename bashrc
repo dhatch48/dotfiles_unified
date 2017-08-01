@@ -213,7 +213,6 @@ fi
 if [ -d "$HOME/public_html/wp-content" ]; then
     export wpcontent="$HOME/public_html/wp-content"
 fi
-
 GREEN="\[$(tput setaf 2)\]"
 YELLOW="\[$(tput setaf 3)\]"
 PURPLE="\[$(tput setaf 5)\]"
@@ -238,14 +237,6 @@ export GREP_COLOR="34;40"
 
 # Specify options grep should use by default
 #export GREP_OPTIONS="--color=auto"
-
-# Up/Down arrow for filtered history search
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-
-# Ctrl+left/right arrow
-bind '"\e[1;5D": backward-word'
-bind '"\e[1;5C": forward-word'
 
 # Use vi key bindings instead of emacs
 #set -o vi
