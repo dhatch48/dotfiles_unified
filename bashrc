@@ -201,11 +201,15 @@ if [ "$OSTYPE" = "cygwin" ]; then
     # Chages default file permissions from umask 022 (-rwxr-xr-x)
     umask 027
 
-    alias open='cygstart'   # mac-like open
-    alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
     export unified='/cygdrive/d/wamp/www/unified/'
     export modeltools='/cygdrive/d/wamp/www/unified/tools'
     export winhome="$(cygpath -H)/$USER"
+    alias open='cygstart'   # mac-like open
+    alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
+
+    cygwinSetup="$winhome/Downloads/setup-x86.exe"
+    alias cyg-up="wget -N -P $winhome/Downloads/ https://www.cygwin.com/setup-x86.exe && chmod u+x $cygwinSetup"
+    alias cyg-get="$cygwinSetup -q -P"
 fi
 
 if [ -d "$HOME/public_html/wp-content" ]; then
