@@ -96,6 +96,7 @@ alias findswap="find . -iname '*.swp'"
 alias rmswap="find . -iname '*.swp' -print0 | xargs -0 rm"
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
+alias eb="vim $HOME/.bashrc" # Edit Bash
 
 
 # Git aliases
@@ -208,7 +209,8 @@ if [ "$OSTYPE" = "cygwin" ]; then
     alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
 
     cygwinSetup="$winhome/Downloads/setup-x86.exe"
-    alias cyg-up="wget -N -P $winhome/Downloads/ https://www.cygwin.com/setup-x86.exe && chmod u+x $cygwinSetup"
+    # Download latest cygiwn setyp and run the installer semi attended
+    alias cygup="wget -N -P $winhome/Downloads/ https://www.cygwin.com/setup-x86.exe && chmod u+x $cygwinSetup; $cygwinSetup -M"
     alias cyg-get="$cygwinSetup -q -P"
 fi
 
