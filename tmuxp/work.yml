@@ -1,0 +1,24 @@
+session_name: work
+windows:
+  - window_name: bash
+    focus: true
+    panes:
+      -
+  - window_name: remote
+    layout: eb4f,237x66,0,0[237x57,0,0,1,237x8,0,58,4]
+    panes:
+      - shell_command:
+        - ssh hl
+        - cd $wpcontent
+        - clear
+        - g
+        focus: true
+      - shell_command: 
+        - ssh hl
+        - tail -f ~/logs/php_error.log
+  - window_name: dev
+    panes:
+      - cd $unified
+  - window_name: log 
+    panes:
+      - tail -f -n 5 $( (ls //vm2/c\$/wamp/logs/apache_error_$(date +%Y-%m)* || ls //vm2/c\$/wamp/logs/apache_error_$(date +'%Y-%m' -d 'last month')*) | tail -1)
