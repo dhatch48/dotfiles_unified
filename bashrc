@@ -97,6 +97,8 @@ alias rmswap="find . -iname '*.swp' -print0 | xargs -0 rm"
 # Show bash keybindings
 alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
 alias eb="vim $HOME/.bashrc" # Edit Bash
+alias ta='tmux attach-session'
+alias tl='tmux list-session'
 
 
 # Git aliases
