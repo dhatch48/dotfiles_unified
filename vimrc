@@ -28,13 +28,17 @@ Plugin 'tpope/vim-surround'   " Easily add/change surroundings
 Plugin 'scrooloose/nerdcommenter'  " Comment whatever
 Plugin 'skwp/greplace.vim'    " Simple grep and replace in quickfix window
 
-"Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
-"Bundle 'joonty/vdebug.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
+
+" Greplace Usage:
+"    1. Use :Gsearch to get a buffer window of your search results
+"    2. then you can make the replacements inside the buffer window using traditional tools (%s/foo/bar/)
+"    3. Invoke :Greplace to make your changes across all files. It will ask you interatively y/n/a - you can hit 'a' to do all.
+"    4. Save changes to all files with :wall (write all)
 
 
 """"""""""""""""""""""""""""""""""""""""
