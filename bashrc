@@ -187,7 +187,10 @@ export HISTCONTROL=ignoreboth:erasedups		# ignoredups:ignorespace
 export HISTIGNORE="t *:fg:delHistory*:history:history -d*:h:h -d*:pwd:exit:df:ll:ls:man *:"
 # append to the history file, don't overwrite it
 shopt -s histappend
+# Set other shell options
 shopt -s globstar   # Turn on **
+shopt -o -s notify  # Notify when background jobs terminate
+shopt -q -s cdspell # Help correct typos while using cd command
 
 # Save and reload the history after each command finishes
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
