@@ -287,6 +287,8 @@ nnoremap <silent> <f8> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :noh
 " Convert tabs to space
 nnoremap <f9> :retab <CR>
 
+set pastetoggle=<F10>
+
 " Sort a list of words
 vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 nnoremap <leader>ss :execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
