@@ -358,5 +358,13 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'ξ'
 "let g:airline_theme='solarized'
 
+" Netwr options
+"let g:netrw_banner = 0         " Turn off banner
+"let g:netrw_liststyle = 3      " Tree view
+let g:netrw_browse_split = 4   " Preview mode
+"let g:netrw_browse_split = 2   " Open vertically split
+let g:netrw_altv = 1
+let g:netrw_winsize = 25       " Size 25% of window
+
 " Turn on globstar for external vim commands
 set shell+=\ -O\ globstar
