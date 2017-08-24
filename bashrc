@@ -253,27 +253,38 @@ export GREP_COLOR="34;40"
 ##############################
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
+bind "set show-mode-in-prompt on"
+#bind 'set vi-ins-mode-string \1\e[38;5;7;48;5;240;1m\2 I \1\e[38;5;240;1m\2\1\e[0m\2'
+#bind 'set vi-cmd-mode-string \1\e[38;5;7;48;5;166;1m\2 N \1\e[38;5;166;1m\2\1\e[0m\2'
+bind 'set vi-ins-mode-string \1\e[30;1;44m\2 I \1\e[0m\2'
+bind 'set vi-cmd-mode-string \1\e[5;30;1;103m\2 N \1\e[0m\2'
 
-# Up/Down arrow for filtered history search
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-
-# Ctrl+left/right arrow
-bind '"\e[1;5D": backward-word'
-bind '"\e[1;5C": forward-word'
-##############################
+# TODO Not working since switch to vi
+bind -x '"\e\eOP": "tmux attach-session"' #F1
+bind -x '"\e\eOQ": "tmux detach-client"'  #F2
 
 # Use vi key bindings instead of emacs
-#set -o vi
-#bind -m vi-command ".":insert-last-argument
-#bind -m vi-command "gg":beginning-of-history
-#bind -m vi-command "G":end-of-history
-#bind -m vi-command "u":undo
-#bind -m vi-insert "\C-l.":clear-screen
-#bind -m vi-insert "\C-a.":beginning-of-line
-#bind -m vi-insert "\C-e.":end-of-line
-#bind -m vi-insert "\C-w.":backward-kill-word
-#bind -m vi-insert "jk":vi-movement-mode
+set -o vi
+# Poly fill some emacs bindings in vi mode
+bind -m vi-command '".":insert-last-argument'
+bind -m vi-command '"gg":beginning-of-history'
+bind -m vi-command '"G":end-of-history'
+bind -m vi-command '"u":undo'
+bind -m vi-insert '"\C-l.":clear-screen'
+bind -m vi-insert '"\C-a.":beginning-of-line'
+bind -m vi-insert '"\C-e.":end-of-line'
+bind -m vi-insert '"\C-w.":backward-kill-word'
+bind -m vi-insert '"jk":vi-movement-mode'
+
+# Other cool stuff
+bind -m vi-insert '" ": magic-space'
+# Up/Down arrow for filtered history search
+bind -m vi-insert '"\e[A": history-search-backward'
+bind -m vi-insert '"\e[B": history-search-forward'
+# Ctrl+left/right arrow'
+bind -m vi-insert '"\e[1;5D": backward-word'
+bind -m vi-insert '"\e[1;5C": forward-word'
+##############################
 
 extract () {
     if [ -f $1 ] ; then
