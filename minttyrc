@@ -1,4 +1,4 @@
-BoldAsFont=no
+BoldAsFont=yes
 RightClickAction=paste
 Rows=50
 Columns=80
