@@ -12,7 +12,7 @@ FontSmoothing=default
 Transparency=off
 #Term=xterm
 Term=xterm-256color
-BellSound=yes
+BellSound=no
 BellFlash=no
 
 # Argonaut
