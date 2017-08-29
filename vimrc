@@ -117,7 +117,7 @@ set autoindent      " Copy indent from current line when starting a new line
 set textwidth=79    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
  
-set formatoptions=c,q,r,t " This is a sequence of letters which describes how
+set formatoptions=t,c,q,o,r,n,j " This is a sequence of letters which describes how
                     " automatic formatting is to be done.
                     "
                     " letter    meaning when present in 'formatoptions'
@@ -127,9 +127,9 @@ set formatoptions=c,q,r,t " This is a sequence of letters which describes how
                     " q         Allow formatting of comments with "gq".
                     " r         Automatically insert the current comment leader
                     "           after hitting <Enter> in Insert mode. 
-                    " t         Auto-wrap text using textwidth (does not apply
-                    "           to comments)
                     " n         recognize numbered lists
+                    " j	        Where it makes sense, remove a comment leader
+                    "           when joining lines.
  
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
@@ -182,8 +182,6 @@ set timeoutlen=500
 "set ttimeoutlen=0
 
 set cursorline
-
-set pastetoggle=<F10>
 
 " set cursorline colors
 highlight cursorline term=bold cterm=NONE ctermbg=236 ctermfg=none
