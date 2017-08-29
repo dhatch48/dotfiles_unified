@@ -1,9 +1,9 @@
 session_name: work
 windows:
   - window_name: bash
-    focus: true
     panes:
       -
+    focus: true
   - window_name: remote
     layout: eb4f,237x66,0,0[237x57,0,0,1,237x8,0,58,4]
     panes:
