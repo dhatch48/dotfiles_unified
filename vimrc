@@ -309,6 +309,8 @@ vnoremap <Leader>c "*y
 
 " Yank line w/o line return to clipboard
 nnoremap yil ^vg_"*y
+" Select "in line"
+nnoremap vil ^vg_
 
 " Copy to clipboard current file path
 nmap <Leader>fp :let @* = expand("%")<CR>
