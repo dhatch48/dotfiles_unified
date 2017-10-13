@@ -238,18 +238,25 @@ noremap <Leader>' :%s:\v::g<Left><Left><Left>
 nnoremap <Leader>ev :vs $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
-" Comment lines or paragraph with //
-nnoremap <Leader>cl mzI//<esc>'z
-nnoremap <Leader>cp mzVip:s/^\s*\zs\ze/\/\//<cr><esc>'z
+if filereadable(expand("~/dotfiles/vim/bundle/nerdcommenter/plugin/NERD_commenter.vim"))
+    " nerdcommenter paragraph
+    nnoremap <Leader>cp Vip:call NERDComment("x", "Comment")<CR>
+    nnoremap <Leader>up Vip:call NERDComment("x", "Uncomment")<CR>
+else
+    " Comment lines or paragraph with //
+    nnoremap <Leader>cl mzI//<esc>'z
+    nnoremap <Leader>cp mzVip:s/^\s*\zs\ze/\/\// <bar>nohl<cr><esc>'z
 
-nnoremap <Leader>ul mzV:s/\%V\(\s*\)\/\//\1<cr>'z
-nnoremap <Leader>up mzVip:s/\%V\(\s*\)\/\//\1<cr>'z
+    nnoremap <Leader>ul mzV:s/\%V\(\s*\)\/\//\1<cr>'z
+    nnoremap <Leader>up mzVip:s/\%V\(\s*\)\/\//\1<cr>'z:nohl<cr>
 
-vnoremap <Leader>cl mz:s/^\s*\zs\ze/\/\/<cr>'z
-vnoremap <Leader>ul mzV:s/\%V\(\s*\)\/\//\1<cr>'z
+    vnoremap <Leader>cl mz:s/^\s*\zs\ze/\/\/<cr>'z
+    vnoremap <Leader>ul mzV:s/\%V\(\s*\)\/\//\1<cr>'z
+endif
 
 " Insert php var_dump() and die() for debugging
 noremap <Leader>d oecho '<pre>';var_dump();echo '</pre>';die('here');kk0f(a
+noremap <Leader>e oerror_log(print_r(, true));0f,i
 
 " Get currend word count
 nnoremap * *<C-O>:%s///gn<CR>
