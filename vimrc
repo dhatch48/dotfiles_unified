@@ -325,7 +325,9 @@ nnoremap yil ^vg_"*y
 nnoremap vil ^vg_
 
 " Copy to clipboard current file path
-nmap <Leader>fp :let @* = expand("%")<CR>
+nnoremap <Leader>cf :let @*=expand("%:p")<CR>
+nnoremap <Leader>cfr :let @*=expand("%")<CR>
+nnoremap <Leader>yf :let @"=expand("%:p")<CR>
 
 " Open command-line window for editing comman history or search history.
 " Use: q: or q/ respectively
