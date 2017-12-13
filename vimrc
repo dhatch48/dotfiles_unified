@@ -122,6 +122,7 @@ set formatoptions=t,c,q,o,r,n,j " This is a sequence of letters which describes 
                     "
                     " letter    meaning when present in 'formatoptions'
                     " ------    ---------------------------------------
+                    " t         Auto-wrap to limit by textwidth
                     " c         Auto-wrap comments using textwidth, inserting
                     "           the current comment leader automatically.
                     " q         Allow formatting of comments with "gq".
@@ -130,7 +131,7 @@ set formatoptions=t,c,q,o,r,n,j " This is a sequence of letters which describes 
                     " n         recognize numbered lists
                     " j	        Where it makes sense, remove a comment leader
                     "           when joining lines.
- 
+
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
  
@@ -180,6 +181,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 set timeoutlen=500
 "set ttimeoutlen=0
+
+" Turn on globstar for external vim commands
+set shell+=\ -O\ globstar
 
 set cursorline
 
@@ -379,6 +383,3 @@ let g:netrw_browse_split = 4   " Preview mode
 "let g:netrw_browse_split = 2   " Open vertically split
 let g:netrw_altv = 1
 let g:netrw_winsize = 25       " Size 25% of window
-
-" Turn on globstar for external vim commands
-set shell+=\ -O\ globstar
