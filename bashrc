@@ -271,6 +271,7 @@ if [[ $OSTYPE == cygwin ]]; then
     # Download latest cygiwn setyp and run the installer semi attended
     alias cygup="wget -N -P $winhome/Downloads/ https://www.cygwin.com/setup-x86.exe && chmod u+x $cygwinSetup; $cygwinSetup -M"
     alias cyg-get="$cygwinSetup -q -P"
+    alias sudo='cygstart --action=runas'
 
 # Mac OSX stuff/overrides
 elif [[ $OSTYPE == darwin* ]]; then
