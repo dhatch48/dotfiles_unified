@@ -293,6 +293,8 @@ elif [[ $OSTYPE == darwin* ]]; then
     alias egrep='LC_ALL=C egrep'
     alias brewck="brew update; brew outdated"
     alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
+    alias getsw='system_profiler SPSoftwareDataType'
+    alias gethw='system_profiler SPHardwareDataType'
 
     function del() {
         for thisArg in "$@"; do
