@@ -189,16 +189,16 @@ bind 'set vi-cmd-mode-string \1\e[5;30;1;103m\2 N \1\e[0m\2'
 set -o vi
 # Poly fill some emacs bindings in vi mode
 bind -m vi-command '".":insert-last-argument'
-bind -m vi-command '"gg":beginning-of-history'
-bind -m vi-command '"G":end-of-history'
-bind -m vi-command '"u":undo'
 bind -m vi-insert '"\C-l":clear-screen'
 bind -m vi-insert '"\C-a":beginning-of-line'
 bind -m vi-insert '"\C-e":end-of-line'
 bind -m vi-insert '"\C-w":backward-kill-word'
-bind -m vi-insert '"jk":vi-movement-mode'
 
 # Other cool stuff
+bind -m vi-insert '"jk":vi-movement-mode'
+bind -m vi-command '"gg":beginning-of-history'
+bind -m vi-command '"G":end-of-history'
+bind -m vi-command '"u":undo'
 bind -m vi-insert '" ": magic-space'
 bind -m vi-insert -x '"\eOP": "tmux attach-session"' #F1
 bind -m vi-insert -x '"\eOQ": "tmux detach-client"'  #F2
