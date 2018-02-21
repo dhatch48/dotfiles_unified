@@ -327,6 +327,10 @@ fi
 # -lZ outputs filenames null delimited. -z (lower) reads input null delimited
 # instead of newline
 
+# Find difference between two files' lines
+#grep -Fxvf file1 file2
+# or
+#comm -13 <(sort file1) <(sort file2)
 
 #File Permissions: Octal Notation
 #------------------------------------
