@@ -120,6 +120,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+if [ -f ~/bin/wp-completion.bash ]; then
+    . ~/bin/wp-completion.bash
+fi
+
 echo ""
 echo -n "Welcome to bash on $OSTYPE, "; whoami
 echo ""
