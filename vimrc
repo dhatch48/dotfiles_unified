@@ -385,11 +385,15 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25       " Size 25% of window
 
 function Py2()
-  let g:syntastic_python_python_exec = 'usr/bin/python'
+  let g:syntastic_python_python_exec = '/usr/bin/python'
 endfunction
 
 function Py3()
-  let g:syntastic_python_python_exec = 'usr/bin/env python3'
+    if $OS == 'Windows_NT'
+      let g:syntastic_python_python_exec = '/usr/bin/python3'
+    else
+      let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+    endif
 endfunction
 
 call Py3()   " default to Py3 because I try to use it when possible
