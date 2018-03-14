@@ -303,6 +303,9 @@ nnoremap <f9> :retab <CR>
 
 set pastetoggle=<F10>
 
+" Sudo save current file :h E212
+nnoremap <f11> :w !sudo tee % > /dev/null
+
 " Sort a list of words
 vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 nnoremap <leader>ss :execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
