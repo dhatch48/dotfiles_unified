@@ -217,7 +217,8 @@ nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
 " Allow saving of files as sudo when I forget to start vim using sudo.
-cmap w!! w !sudo tee > /dev/null %
+cnoremap w!! w !sudo tee "%" > /dev/null
+nnoremap <Leader>so :w !sudo tee "%" > /dev/null<CR>
 
 " Save files faster
 nnoremap <Leader>s :w<CR>
