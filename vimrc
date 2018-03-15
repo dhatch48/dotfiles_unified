@@ -216,6 +216,9 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
+" Allow saving of files as sudo when I forget to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Save files faster
 nnoremap <Leader>s :w<CR>
 
@@ -302,9 +305,6 @@ nnoremap <silent> <f8> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :noh
 nnoremap <f9> :retab <CR>
 
 set pastetoggle=<F10>
-
-" Sudo save current file :h E212
-nnoremap <f11> :w !sudo tee % > /dev/null
 
 " Sort a list of words
 vnoremap <leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
