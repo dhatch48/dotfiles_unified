@@ -284,11 +284,11 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 if $OS == 'Windows_NT'
     nnoremap <f3> :!php `cygpath -w %` <CR>
 else
-    nnoremap <f3> :!php % <CR>
+    nnoremap <f3> :!php "%" <CR>
 endif
 
 " run python3 on current buffer
-nnoremap <f4> :!python3 % <CR>
+nnoremap <f4> :!python3 "%" <CR>
 
 " Convert dos to unix
 nnoremap <f5> :update <bar> :e ++ff=dos <bar> :setlocal ff=unix <CR>
