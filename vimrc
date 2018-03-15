@@ -282,7 +282,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 
 " run php on current buffer
 if $OS == 'Windows_NT'
-    nnoremap <f3> :!php `cygpath -w %` <CR>
+    nnoremap <f3> :!php "`cygpath -w "%"`"<CR>
 else
     nnoremap <f3> :!php "%" <CR>
 endif
