@@ -198,6 +198,7 @@ bind -m vi-insert '"\C-a":beginning-of-line'
 bind -m vi-insert '"\C-e":end-of-line'
 bind -m vi-insert '"\C-w":backward-kill-word'
 bind -m vi-insert '"\e\C-e":shell-expand-line'
+bind -m vi-insert '"\C-x\C-v":display-shell-version'
 
 # Other cool stuff
 bind -m vi-insert '"jk":vi-movement-mode'
