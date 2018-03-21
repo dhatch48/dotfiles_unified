@@ -63,21 +63,21 @@ filetype plugin indent on    " required
 
 " For multi-byte character support (CJK support, for example):
 "set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
-       
+
 set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
- 
+
 set shiftwidth=4    " Number of spaces to use for each step of (auto)indent.
- 
+
 set expandtab       " Use the appropriate number of spaces to insert a <Tab>.
                     " Spaces are used in indents with the '>' and '<' commands
                     " and when 'autoindent' is on. To insert a real tab when
                     " 'expandtab' is on, use CTRL-V <Tab>.
- 
+
 set smarttab        " When on, a <Tab> in front of a line inserts blanks
                     " according to 'shiftwidth'. 'tabstop' is used in other
                     " places. A <BS> will delete a 'shiftwidth' worth of space
                     " at the start of the line.
- 
+
 set showcmd         " Show (partial) command in status line.
 
 set showmode        " Display the mode you're in.
@@ -94,30 +94,30 @@ set showmatch       " When a bracket is inserted, briefly jump to the matching
                     " one. The jump is only done if the match can be seen on the
                     " screen. The time to show the match can be set with
                     " 'matchtime'.
- 
+
 set hlsearch        " When there is a previous search pattern, highlight all
                     " its matches.
- 
+
 set incsearch       " While typing a search command, show immediately where the
                     " so far typed pattern matches.
- 
+
 set ignorecase      " Ignore case in search patterns.
- 
+
 set smartcase       " Override the 'ignorecase' option if the search pattern
                     " contains upper case characters.
- 
+
 set backspace=2     " Influences the working of <BS>, <Del>, CTRL-W
                     " and CTRL-U in Insert mode. This is a list of items,
                     " separated by commas. Each item allows a way to backspace
                     " over something.
- 
+
 set autoindent      " Copy indent from current line when starting a new line
                     " (typing <CR> in Insert mode or when using the "o" or "O"
                     " command).
- 
+
 set textwidth=79    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
- 
+
 set formatoptions=t,c,q,o,r,n,j " This is a sequence of letters which describes how
                     " automatic formatting is to be done.
                     "
@@ -128,19 +128,19 @@ set formatoptions=t,c,q,o,r,n,j " This is a sequence of letters which describes 
                     "           the current comment leader automatically.
                     " q         Allow formatting of comments with "gq".
                     " r         Automatically insert the current comment leader
-                    "           after hitting <Enter> in Insert mode. 
+                    "           after hitting <Enter> in Insert mode.
                     " n         recognize numbered lists
                     " j	        Where it makes sense, remove a comment leader
                     "           when joining lines.
 
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
- 
+
 set background=dark " When set to "dark", Vim will try to use colors that look
                     " good on a dark background. When set to "light", Vim will
                     " try to use colors that look good on a light background.
                     " Any other value is illegal.
- 
+
 set mouse=a         " Enable the use of the mouse.
 set ttymouse=xterm2
 
@@ -160,7 +160,7 @@ syntax on           " Enable syntax highlighting
 
 set visualbell      " Use visual bell instead of beeping when doing something wrong
 
-"set cmdheight=2    " Set the command window height to 2 lines, to avoid many 
+"set cmdheight=2    " Set the command window height to 2 lines, to avoid many
 " cases of having to press <Enter> to continue"
 
 "set matchtime=5    " how many tenths of a second to blink matching brackets for
@@ -298,7 +298,7 @@ nnoremap <f5> :update <bar> :e ++ff=dos <bar> :setlocal ff=unix <CR>
 nnoremap <f6> :update <bar> :e ++ff=dos <CR>
 
 " Toggle on/off spell checker
-nnoremap <f7> :setlocal spell! spelllang=en_us <CR> 
+nnoremap <f7> :setlocal spell! spelllang=en_us <CR>
 
 " Remove trailing whitespace
 nnoremap <silent> <f8> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
@@ -349,7 +349,7 @@ nnoremap <Leader>yf :let @"=expand("%:p")<CR>
 " Find and replace in multiple files using arglist
 ":args `grep -l findme application/`
 ":argdo %s/findme/replacement/gc
-":argdo update 
+":argdo update
 
 """""""""""""""""""""""""""""""""""""""
 " airline
