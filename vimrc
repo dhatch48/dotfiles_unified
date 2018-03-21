@@ -18,7 +18,8 @@ Plugin 'ctrlpvim/ctrlp.vim'   " fuzzy find files
 Plugin 'scrooloose/nerdtree'  " file drawer, open with :NERDTreeToggle
 Plugin 'scrooloose/syntastic' " syntax checking plugin for Vim.
 Plugin 'tpope/vim-fugitive'   " Ultimate Git helper
-Plugin 'airblade/vim-gitgutter' " shows a git diff in the gutter 
+"Plugin 'airblade/vim-gitgutter' " shows a git diff in the gutter
+Plugin 'mhinz/vim-signify'    " shows svn/git diff in the gutter
 Plugin 'bling/vim-airline'    " Pretty vim status bar
 Plugin 'vim-airline/vim-airline-themes' " Theme for airline
 "Plugin 'xolox/vim-misc'       " Required by easytags.
@@ -387,6 +388,9 @@ let g:netrw_browse_split = 4   " Preview mode
 "let g:netrw_browse_split = 2   " Open vertically split
 let g:netrw_altv = 1
 let g:netrw_winsize = 25       " Size 25% of window
+
+" Improve loading time by setting used vcs types
+let g:signify_vcs_list = [ 'git', 'svn' ]
 
 function Py2()
   let g:syntastic_python_python_exec = '/usr/bin/python'
