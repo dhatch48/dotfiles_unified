@@ -22,8 +22,6 @@ Plugin 'tpope/vim-fugitive'   " Ultimate Git helper
 Plugin 'mhinz/vim-signify'    " shows svn/git diff in the gutter
 Plugin 'bling/vim-airline'    " Pretty vim status bar
 Plugin 'vim-airline/vim-airline-themes' " Theme for airline
-"Plugin 'xolox/vim-misc'       " Required by easytags.
-"Plugin 'xolox/vim-easytags'   " Automated tag file generation and syntax highlighting of tags
 Plugin 'godlygeek/tabular'    " Easy formatting to the same column width
 Plugin 'tpope/vim-surround'   " Easily add/change surroundings
 Plugin 'scrooloose/nerdcommenter'  " Comment whatever
