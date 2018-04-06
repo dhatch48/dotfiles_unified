@@ -382,7 +382,7 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'ξ'
-"let g:airline_theme='solarized'
+let g:airline_theme='term'
 
 " Netwr options
 "let g:netrw_banner = 0         " Turn off banner
@@ -394,6 +394,11 @@ let g:netrw_winsize = 25       " Size 25% of window
 
 " Improve loading time by setting used vcs types
 let g:signify_vcs_list = [ 'git', 'svn' ]
+
+" highlight lines in Sy and vimdiff etc.)
+highlight DiffAdd           cterm=bold ctermbg=none ctermfg=Green
+highlight DiffDelete        cterm=bold ctermbg=none ctermfg=Red
+highlight DiffChange        cterm=bold ctermbg=none ctermfg=Yellow
 
 function Py2()
   let g:syntastic_python_python_exec = '/usr/bin/python'
