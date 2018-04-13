@@ -279,6 +279,7 @@ if [[ $OSTYPE == cygwin ]]; then
     alias cyg-get="$cygwinSetup -q -P"
     alias sudo='cygstart --action=runas'
     alias arp='arp -a |tr - :'
+    alias down="cd $winhome/Downloads"
 
 # Mac OSX stuff/overrides
 elif [[ $OSTYPE == darwin* ]]; then
