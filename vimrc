@@ -265,7 +265,7 @@ endif
 noremap <Leader>d oecho '<pre>';var_dump();echo '</pre>';die('here');kk0f(a
 noremap <Leader>e oerror_log(print_r(, true));0f,i
 
-" Get currend word count
+" Get current word count
 nnoremap * *<C-O>:%s///gn<CR>
 " Search visual selection and show count
 vnoremap // y:%s/<C-R>"//gn<CR>
