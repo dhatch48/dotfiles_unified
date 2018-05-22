@@ -304,6 +304,21 @@ elif [[ $OSTYPE == darwin* ]]; then
     alias getsw='system_profiler SPSoftwareDataType'
     alias gethw='system_profiler SPHardwareDataType'
 
+    launchctlFind () {
+        LaunchctlPATHS=( \
+            ~/Library/LaunchAgents \
+            /Library/LaunchAgents \
+            /Library/LaunchDaemons \
+            /System/Library/LaunchAgents \
+            /System/Library/LaunchDaemons \
+        )
+        for curPATH in "${LaunchctlPATHS[@]}";do
+            grep -Ri "$1" "$curPATH"
+        done
+        return 0;
+    }
+    export -f launchctlFind
+
     function del() {
         for thisArg in "$@"; do
             mv -n "$thisArg" ~/.Trash
