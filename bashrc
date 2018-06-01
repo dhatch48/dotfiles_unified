@@ -257,7 +257,7 @@ export -f path
 # Cygwin only stuff
 if [[ $OSTYPE == cygwin ]]; then
     # Chages default file permissions from umask 022 (-rwxr-xr-x)
-    umask 027
+    umask 077
 
     # Avoid path duplicates when tmux loads
     if [ -z "${TMUX}" ]; then
