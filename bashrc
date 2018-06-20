@@ -149,8 +149,11 @@ shopt -s globstar   # Turn on **
 shopt -o -s notify  # Notify when background jobs terminate
 shopt -q -s cdspell # Help correct typos while using cd command
 
-# Save and reload the history after each command finishes
+# Sync history between multiple terminals
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# Append history after each command
+#export PROMPT_COMMAND="history -a"
 
 export MYNAME='David Hatch'
 export EDITOR=vim
