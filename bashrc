@@ -50,7 +50,6 @@ alias showkeys="bind -p | grep -v '^#\|self-insert\|^$'"
 alias eb="vim $HOME/.bashrc" # Edit Bash
 alias ta='tmux attach-session'
 alias tl='tmux list-session'
-alias appversion='mdls -name kMDItemVersion'
 
 
 # Git aliases
@@ -306,6 +305,7 @@ elif [[ $OSTYPE == darwin* ]]; then
     alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
     alias getsw='system_profiler SPSoftwareDataType'
     alias gethw='system_profiler SPHardwareDataType'
+    alias appversion='mdls -name kMDItemVersion'
 
     launchctlFind () {
         LaunchctlPATHS=( \
