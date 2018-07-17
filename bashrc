@@ -274,6 +274,7 @@ if [[ $OSTYPE == cygwin ]]; then
     alias lc="stat -c '%w    %n' * | sort -k1r"
     alias open='cygstart'   # mac-like open
     alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
+    alias php='/cygdrive/d/wamp/bin/php/php5.6.36/php.exe'
 
     cygwinSetup="$winhome/Downloads/setup-x86.exe"
     # Download latest cygiwn setyp and run the installer semi attended
