@@ -126,7 +126,7 @@ fi
 echo ""
 echo -n "Welcome to bash on $OSTYPE, "; whoami
 echo ""
-echo -n "Today is "; date "+%m-%d-%Y %H:%M:%S"
+echo -n "Today is "; date "+%a %b %d %Y %k:%M:%S"
 echo ""
 cal
 echo -n "Uptime: "; uptime
