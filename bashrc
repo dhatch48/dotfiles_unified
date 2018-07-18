@@ -134,9 +134,9 @@ echo ""
 
 
 # or set it and export it in same line
-export HISTSIZE=5000				    	# 500 is default
-export HISTTIMEFORMAT='%b %d %T  '		    # using strftime
-export HISTCONTROL=ignorespace:erasedups   	# ignoredups:ignorespace
+export HISTSIZE=5000                        # 500 is default
+export HISTTIMEFORMAT='%b %d %T  '          # using strftime
+export HISTCONTROL=ignorespace:erasedups    # ignoredups:ignorespace
 export HISTIGNORE="t *:fg:delHistory*:history:history *:h:h *:pwd:exit:df:l[last]:l[last] *:man *:help *"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -157,7 +157,7 @@ shopt -q -s cdspell # Help correct typos while using cd command
 export MYNAME='David Hatch'
 export EDITOR=vim
 
-export LANG=en_US.UTF-8 
+export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -337,7 +337,7 @@ fi
 
 # This is for your git auto completion
 if [ -f ~/.git-completion.bash ]; then
-	source ~/.git-completion.bash
+    source ~/.git-completion.bash
 elif [ -f /usr/local/share/bash-completion/bash_completion ]; then
     source /usr/local/share/bash-completion/bash_completion
 fi
@@ -365,23 +365,23 @@ fi
 #File Permissions: Octal Notation
 #------------------------------------
 #
-#		user	group	other
+#       user    group   other
 #
-#	r	4	4	4
-#	w	2	2	0
-#	x	1	0	0
+#   r   4   4   4
+#   w   2   2   0
+#   x   1   0   0
 #
-#	total	7	6	4
+#   total   7   6   4
 #
-#	rwxrw-r-- = 764
+#   rwxrw-r-- = 764
 #
-#	rwxr-xr-x = 755
+#   rwxr-xr-x = 755
 #
-#	rwx------ = 700
+#   rwx------ = 700
 #
-#	rwxr--r-- = 744
+#   rwxr--r-- = 744
 #
-#	r-------- = 400  (root must change or execute)
+#   r-------- = 400  (root must change or execute)
 #
 #   u+rwx    User read, write, execute
 #   o-w      Other minus write
