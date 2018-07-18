@@ -276,9 +276,13 @@ if [[ $OSTYPE == cygwin ]]; then
     alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
     alias php='/cygdrive/d/wamp/bin/php/php5.6.36/php.exe'
 
-    cygwinSetup="$winhome/Downloads/setup-x86.exe"
+    if [ $(uname -m) == "x86_64" ]; then
+        cygwinSetup="$winhome/Downloads/setup-x86_64.exe"
+    else
+        cygwinSetup="$winhome/Downloads/setup-x86.exe"
+    fi
     # Download latest cygiwn setyp and run the installer semi attended
-    alias cygup="wget -N -P $winhome/Downloads/ https://www.cygwin.com/setup-x86.exe && chmod u+x $cygwinSetup; $cygwinSetup -M"
+    alias cygup="wget -N -P $winhome/Downloads/ https://www.cygwin.com/${cygwinSetup##*/} && chmod u+x $cygwinSetup; $cygwinSetup -M"
     alias cyg-get="$cygwinSetup -q -P"
     alias sudo='cygstart --action=runas'
     alias arp='arp -a |tr - :'
