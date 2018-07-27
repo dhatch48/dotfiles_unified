@@ -332,6 +332,8 @@ elif [[ $OSTYPE == darwin* ]]; then
         done
     }
     export -f del
+else
+    export PATH=$PATH:/usr/sbin
 fi
 
 # This is for your git auto completion
