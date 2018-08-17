@@ -15,7 +15,7 @@ windows:
         focus: true
       - shell_command: 
         - ssh hl
-        - tail -f ~/logs/php_error.log
+        - tail -f ~/logs/honorlife_com.php.error.log
   - window_name: dev
     panes:
       - cd $unified
