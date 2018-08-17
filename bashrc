@@ -344,7 +344,11 @@ elif [ -f /usr/local/share/bash-completion/bash_completion ]; then
 fi
 
 # Recursively remove files
-#find . -name "Thumbs.db" -print0 | xargs -0 rm
+#1 find . -name "thumbs.db" -delete
+# or
+#2 find . -iname "Thumbs.db" -exec rm '{}' \;
+# or
+#3 find . -name "Thumbs.db" -print0 | xargs -0 rm
 # Explanation
 # find in current dir and below the name in quotes and print it ending with
 # null... -0 tells xargs that args are null separated and removes each file
@@ -362,6 +366,12 @@ fi
 #grep -Fxvf file1 file2
 # or
 #comm -13 <(sort file1) <(sort file2)
+
+# Reset directory and file permissions
+# Dirs:
+#find ~/public_html/ -type d -exec chmod 755 '{}' \;
+# Files:
+#find ~/public_html/ -type f -exec chmod 644 '{}' \;
 
 #File Permissions: Octal Notation
 #------------------------------------
