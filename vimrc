@@ -417,3 +417,10 @@ function Py3()
 endfunction
 
 call Py3()   " default to Py3 because I try to use it when possible
+
+" Set override grep with faster alternatives
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ $*
+elseif executable('ag')
+    set grepprg=ag\ --vimgrep\ $*
+endif
