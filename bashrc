@@ -306,7 +306,7 @@ elif [[ $OSTYPE == darwin* ]]; then
     alias grep='LC_ALL=C grep'
     alias fgrep='LC_ALL=C fgrep'
     alias egrep='LC_ALL=C egrep'
-    alias brewck="brew update; brew outdated"
+    alias brewchk="brew update; brew outdated"
     alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
     alias getsw='system_profiler SPSoftwareDataType'
     alias gethw='system_profiler SPHardwareDataType'
