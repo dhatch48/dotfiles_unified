@@ -10,8 +10,10 @@ mkdir ./tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
-# Install vim plugin manager - Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Install vim-plug
+mkdir ~/.vim/autoload
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Install vim plugins using Vundle
-vim +PluginInstall +qall
+# Install plugins with vim-plug
+vim +PlugInstall +qall
