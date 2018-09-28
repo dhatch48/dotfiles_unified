@@ -3,35 +3,23 @@
 """"""""""""""""""""""""""""""""""""""""
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'ctrlpvim/ctrlp.vim'   " fuzzy find files
+Plug 'scrooloose/nerdtree'  " file drawer, open with :NERDTreeToggle
+Plug 'scrooloose/syntastic' " syntax checking plugin for Vim.
+Plug 'tpope/vim-fugitive'   " Ultimate Git helper
+"Plug 'airblade/vim-gitgutter' " shows a git diff in the gutter
+Plug 'mhinz/vim-signify'    " shows svn/git diff in the gutter
+Plug 'bling/vim-airline'    " Pretty vim status bar
+Plug 'vim-airline/vim-airline-themes' " Theme for airline
+Plug 'godlygeek/tabular'    " Easy formatting to the same column width
+Plug 'tpope/vim-surround'   " Easily add/change surroundings
+Plug 'scrooloose/nerdcommenter'  " Comment whatever
+Plug 'skwp/greplace.vim'    " Simple grep and replace in quickfix window
 
-Plugin 'ctrlpvim/ctrlp.vim'   " fuzzy find files
-Plugin 'scrooloose/nerdtree'  " file drawer, open with :NERDTreeToggle
-Plugin 'scrooloose/syntastic' " syntax checking plugin for Vim.
-Plugin 'tpope/vim-fugitive'   " Ultimate Git helper
-"Plugin 'airblade/vim-gitgutter' " shows a git diff in the gutter
-Plugin 'mhinz/vim-signify'    " shows svn/git diff in the gutter
-Plugin 'bling/vim-airline'    " Pretty vim status bar
-Plugin 'vim-airline/vim-airline-themes' " Theme for airline
-Plugin 'godlygeek/tabular'    " Easy formatting to the same column width
-Plugin 'tpope/vim-surround'   " Easily add/change surroundings
-Plugin 'scrooloose/nerdcommenter'  " Comment whatever
-Plugin 'skwp/greplace.vim'    " Simple grep and replace in quickfix window
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" see :h vundle for more details or wiki for FAQ
+call plug#end()
 
 " Greplace Usage:
 "    1. Use :Gsearch to get a buffer window of your search results
