@@ -379,7 +379,7 @@ let g:airline_theme='term'
 " Netwr options
 "let g:netrw_banner = 0         " Turn off banner
 let g:netrw_liststyle = 1       " Detailed list view
-let g:netrw_browse_split = 2    " Open vertically split
+"let g:netrw_browse_split = 2    " Open vertically split
 let g:netrw_altv = 1            " Open vsplit on right
 let g:netrw_winsize = 75        " Size 25% of window
 
