@@ -378,11 +378,10 @@ let g:airline_theme='term'
 
 " Netwr options
 "let g:netrw_banner = 0         " Turn off banner
-"let g:netrw_liststyle = 3      " Tree view
-let g:netrw_browse_split = 4   " Preview mode
-"let g:netrw_browse_split = 2   " Open vertically split
-let g:netrw_altv = 1
-let g:netrw_winsize = 25       " Size 25% of window
+let g:netrw_liststyle = 1       " Detailed list view
+let g:netrw_browse_split = 2    " Open vertically split
+let g:netrw_altv = 1            " Open vsplit on right
+let g:netrw_winsize = 75        " Size 25% of window
 
 " Improve loading time by setting used vcs types
 let g:signify_vcs_list = [ 'git', 'svn' ]
