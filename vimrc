@@ -333,6 +333,13 @@ nnoremap <Leader>cf :let @*=expand("%:p")<CR>
 nnoremap <Leader>cfr :let @*=expand("%")<CR>
 nnoremap <Leader>yf :let @"=expand("%:p")<CR>
 
+" Render and preview markdown file
+if executable('open')
+    nnoremap <Leader>md :! grip '%' --export '%:r.html' && open '%:r.html'<CR>
+else
+    nnoremap <Leader>md :! grip '%' --export '%:r.html' && cygstart '%:r.html'<CR>
+endif
+
 " Open command-line window for editing comman history or search history.
 " Use: q: or q/ respectively
 " Or press CTRL-F in command or search mode to switch to it
