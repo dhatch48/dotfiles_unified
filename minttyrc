@@ -1,7 +1,7 @@
 BoldAsFont=yes
 RightClickAction=paste
 Rows=50
-Columns=80
+Columns=105
 #Font=Courier New
 Font=DejaVu Sans Mono
 FontHeight=11
