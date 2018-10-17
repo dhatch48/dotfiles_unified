@@ -289,7 +289,7 @@ nnoremap <f4> :!python3 "%" <CR>
 " Convert dos to unix
 nnoremap <f5> :update <bar> :e ++ff=dos <bar> :setlocal ff=unix <CR>
 
-" Convert unix LF Fileformat to dos CR/LF
+" Convert unix LF Fileformat to dos CR/LF (Fix ^M endings)
 nnoremap <f6> :update <bar> :e ++ff=dos <CR>
 
 " Toggle on/off spell checker
