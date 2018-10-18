@@ -102,14 +102,14 @@ if [ -f ~/bin/wp-completion.bash ]; then
     . ~/bin/wp-completion.bash
 fi
 
-echo ""
+echo
 echo -n "Welcome to bash on $OSTYPE, "; whoami
-echo ""
+echo
 echo -n "Today is "; date "+%a %b %d %Y %k:%M:%S"
-echo ""
+echo
 cal
 echo -n "Uptime: "; uptime
-echo ""
+echo
 
 
 # or set it and export it in same line
@@ -327,15 +327,18 @@ fi
 # Recursively remove files
 #1 find . -name "thumbs.db" -delete
 # or
-#2 find . -iname "Thumbs.db" -exec rm '{}' \;
+#2 find . -iname "Thumbs.db" -exec rm {} \;
 # or
 #3 find . -name "Thumbs.db" -print0 | xargs -0 rm
 # Explanation
 # find in current dir and below the name in quotes and print it ending with
 # null... -0 tells xargs that args are null separated and removes each file
 
+# Find files readable by everyone
+#find /home/*/public_html/ -iname '*.bak' -perm -o+r
+
 # Search and copy files
-#find . -iname "*foobar*" -exec cp '{}' ~/foo/bar \;
+#find . -iname "*foobar*" -exec cp {} ~/foo/bar \;
 
 # Search in files for multiple patterns on different lines (logical AND)
 #fgrep -lZ 'R/Name(Dark)' *.ai | xargs -0 fgrep -lz 'NumLayers: 3'
