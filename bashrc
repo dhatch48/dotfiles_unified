@@ -266,6 +266,7 @@ if [[ $OSTYPE == cygwin ]]; then
     alias sudo='cygstart --action=runas'
     alias arp='arp -a |tr - :'
     alias down="cd $winhome/Downloads"
+    alias permreset='cygstart --action=runas icacls "\"$(cygpath -wa .)\" /reset /t /c /q"'
 
 # Mac OSX stuff/overrides
 elif [[ $OSTYPE == darwin* ]]; then
