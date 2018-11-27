@@ -237,7 +237,7 @@ export -f path
 
 # Cygwin only stuff
 if [[ $OSTYPE == cygwin ]]; then
-    # Chages default file permissions from umask 022 (-rwxr-xr-x)
+    # Changes default file permissions from umask 022 (-rwxr-xr-x)
     umask 077
 
     # Avoid path duplicates when tmux loads
@@ -260,7 +260,7 @@ if [[ $OSTYPE == cygwin ]]; then
     else
         cygwinSetup="$winhome/Downloads/setup-x86.exe"
     fi
-    # Download latest cygiwn setyp and run the installer semi attended
+    # Download latest Cygiwn setup and run the installer semi attended
     alias cygup="wget -N -P $winhome/Downloads/ https://www.cygwin.com/${cygwinSetup##*/} && chmod u+x $cygwinSetup; $cygwinSetup -M"
     alias cyg-get="$cygwinSetup -q -P"
     alias sudo='cygstart --action=runas'
@@ -268,7 +268,7 @@ if [[ $OSTYPE == cygwin ]]; then
     alias down="cd $winhome/Downloads"
     alias permreset='cygstart --action=runas icacls "\"$(cygpath -wa .)\" /reset /t /c /q"'
 
-# Mac OSX stuff/overrides
+# Mac OS stuff/overrides
 elif [[ $OSTYPE == darwin* ]]; then
     export CLICOLOR=1   # simply enables coloring of your terminal.
     export LSCOLORS=GxFxCxDxBxegedabagaced  # specifies how to color specific items
@@ -344,7 +344,7 @@ fi
 # Search in files for multiple patterns on different lines (logical AND)
 #fgrep -lZ 'R/Name(Dark)' *.ai | xargs -0 fgrep -lz 'NumLayers: 3'
 # Explanation
-# -lZ outputs filenames null delimited. -z (lower) reads input null delimited
+# -lZ outputs file names null delimited. -z (lower) reads input null delimited
 # instead of newline
 
 # Find difference between two files' lines
