@@ -38,6 +38,10 @@ call plug#end()
 " Once the cursor is on the word, use z=, and Vim will suggest a list of
 " alternatives that it thinks may be correct.
 "set spell spelllang=en_us
+set spellfile=~/.vim/spell/en.utf-8.add
+" Use currently active spell checking in word completion
+set complete+=kspell
+
 
 " The default clipboard register is the * reg. The unnamed or " - double quote
 " register is the default register. Everything that yanked or changed,
@@ -267,7 +271,7 @@ vnoremap y ygv<Esc>
 nmap <leader>df :put=strftime('%c')<CR>
 nmap <leader>dt :put=strftime('%F %T')<CR>
 
-" Add getter and setters for properties
+" Add getters and setters for properties
 nnoremap <f1> 0/private\<bar>protected\<bar>publicww"zywjmqGo?}dGopublic function set "zpbhx~A($"zpA){	$this->"zpA = $"zpA;return $this;}<<oo	public function get "zpbhx~A(){	return $this->"zpA;}}V(((((='q
 
 " Shortcut for nerdTree
