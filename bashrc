@@ -272,7 +272,7 @@ if [[ $OSTYPE == cygwin ]]; then
 elif [[ $OSTYPE == darwin* ]]; then
     export CLICOLOR=1   # simply enables coloring of your terminal.
     export LSCOLORS=GxFxCxDxBxegedabagaced  # specifies how to color specific items
-    export PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:/usr/local/sbin/:$PATH"
     export recipes="$HOME/Library/AutoPkg/RecipeOverrides/"
     # Specify options grep should use by default
     export GREP_OPTIONS="--color=auto"
