@@ -281,11 +281,11 @@ nnoremap <f2> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 
 " run php on current buffer
-if $OS == 'Windows_NT'
-    nnoremap <f3> :!php "`cygpath -w "%"`"<CR>
-else
+"if $OS == 'Windows_NT'
+    "nnoremap <f3> :!php "`cygpath -w "%"`"<CR>
+"else
     nnoremap <f3> :!php "%" <CR>
-endif
+"endif
 
 " run python3 on current buffer
 nnoremap <f4> :!python3 "%" <CR>
@@ -401,6 +401,9 @@ let g:signify_vcs_list = [ 'git', 'svn' ]
 highlight DiffAdd           cterm=bold ctermbg=none ctermfg=Green
 highlight DiffDelete        cterm=bold ctermbg=none ctermfg=Red
 highlight DiffChange        cterm=bold ctermbg=none ctermfg=Yellow
+
+" ctrlp options
+let g:ctrlp_max_files=0
 
 function Py2()
   let g:syntastic_python_python_exec = '/usr/bin/python'
