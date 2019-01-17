@@ -220,11 +220,9 @@ extract () {
 export -f extract
 
 delHistory () {
-    start=$1
-    end=${2:-$1}
-    count=$(( end - start ))
+    count=$(( ${2:-$1} - $1 ))
     while [[ $count -ge 0 ]] ; do
-        history -d "$start"
+        history -d $1
         ((count--))
     done
 }
