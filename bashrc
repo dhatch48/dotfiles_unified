@@ -173,11 +173,13 @@ bind 'set vi-cmd-mode-string \1\e[5;30;1;103m\2 N \1\e[0m\2'
 # Use vi key bindings instead of emacs
 set -o vi
 # Poly fill some emacs bindings in vi mode
-bind -m vi-command '".":insert-last-argument'
+bind -m vi-command '".":insert-last-argument'   #(M-.)
+bind -m vi-command '"\e\C-y":yank-nth-arg'      #(M-1 M-C-y)
 bind -m vi-insert '"\C-l":clear-screen'
 bind -m vi-insert '"\C-a":beginning-of-line'
 bind -m vi-insert '"\C-e":end-of-line'
-bind -m vi-insert '"\C-w":backward-kill-word'
+bind -m vi-insert '"\C-w":unix-word-rubout'
+bind -m vi-insert '"\C-k":kill-line'
 bind -m vi-insert '"\e\C-e":shell-expand-line'
 bind -m vi-insert '"\C-x\C-v":display-shell-version'
 
@@ -187,8 +189,8 @@ bind -m vi-command '"gg":beginning-of-history'
 bind -m vi-command '"G":end-of-history'
 bind -m vi-command '"u":undo'
 bind -m vi-insert '" ": magic-space'
-bind -m vi-insert -x '"\eOP": "tmux attach-session"' #F1
-bind -m vi-insert -x '"\eOQ": "tmux detach-client"'  #F2
+bind -m vi-insert -x '"\eOP": "tmux attach-session"' #(F1)
+bind -m vi-insert -x '"\eOQ": "tmux detach-client"'  #(F2)
 # Up/Down arrow for filtered history search
 bind -m vi-insert '"\e[A": history-search-backward'
 bind -m vi-insert '"\e[B": history-search-forward'
