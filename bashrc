@@ -115,7 +115,7 @@ echo
 # or set it and export it in same line
 export HISTSIZE=5000                        # 500 is default
 export HISTTIMEFORMAT='%b %d %T  '          # using strftime
-export HISTCONTROL=ignorespace:erasedups    # ignoredups:ignorespace
+export HISTCONTROL=ignoreboth:erasedups     # ignoredups:ignorespace
 export HISTIGNORE="t *:fg:delHistory*:history:history *:h:h *:pwd:exit:df:l[last]:man *:help *"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
