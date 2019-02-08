@@ -329,6 +329,8 @@ vnoremap <Leader>c "*y
 
 " Yank line w/o line return to clipboard
 nnoremap yil ^vg_"*y
+nnoremap dil ^vg_"*d
+
 " Select "in line"
 nnoremap vil ^vg_
 
