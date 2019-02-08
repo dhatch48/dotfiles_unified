@@ -253,7 +253,7 @@ if [[ $OSTYPE == cygwin ]]; then
     # list and sort by creation date
     alias lc="stat -c '%w    %n' * | sort -k1r"
     alias open='cygstart'   # mac-like open
-    alias phptools='php "d:\wamp\www\unified\tools\createSqlForModel.php"'
+    alias phptools='/cygdrive/d/wamp/bin/php/php5.4.45/php.exe d:/wamp/www/unified/tools/createSqlForModel.php'
 
     if [ $(uname -m) == "x86_64" ]; then
         cygwinSetup="$winhome/Downloads/setup-x86_64.exe"
