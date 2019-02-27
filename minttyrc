@@ -1,5 +1,5 @@
 BoldAsFont=yes
-RightClickAction=paste
+RightClickAction=menu
 Rows=50
 Columns=105
 #Font=Courier New
@@ -57,3 +57,4 @@ BoldWhite=255,255,255
 #BoldMagenta=255,64,255
 #BoldCyan=64,255,255
 #BoldWhite=255,255,255 
+CopyAsHTML=65538
