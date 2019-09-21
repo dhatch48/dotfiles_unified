@@ -237,7 +237,7 @@ noremap <Leader>' :%s:\v::g<Left><Left><Left>
 nnoremap <Leader>ev :vs $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
-if filereadable(expand("~/dotfiles/vim/bundle/nerdcommenter/plugin/NERD_commenter.vim"))
+if filereadable(expand("~/dotfiles/vim/plugged/nerdcommenter/plugin/NERD_commenter.vim"))
     " nerdcommenter paragraph
     nnoremap <Leader>cp Vip:call NERDComment("x", "Comment")<CR>
     nnoremap <Leader>up Vip:call NERDComment("x", "Uncomment")<CR>
