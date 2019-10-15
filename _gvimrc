@@ -134,8 +134,12 @@ set background=dark " When set to "dark", Vim will try to use colors that look
 set mouse=a         " Enable the use of the mouse.
 set ttymouse=xterm2
 
-set directory=~/tmp,/var/tmp,/tmp  " By setting the 'directory' option you can place the swap
-                    " file in another place than where the edited file is.
+" Create swap files in a central location instead of with file
+set directory=~/tmp//,/var/tmp//,/tmp//
+
+" Same for backup files. The double slash at the end ensures that there are no
+" naming collisions
+set backupdir=~/tmp//,/var/tmp//,/tmp//
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
