@@ -134,7 +134,7 @@ set background=dark " When set to "dark", Vim will try to use colors that look
 set mouse=a         " Enable the use of the mouse.
 set ttymouse=xterm2
 
-" Create swap files in a central location
+" Create swap files in a central location instead of with file
 set directory=~/tmp//,/var/tmp//,/tmp//
 
 " Same for backup files. The double slash at the end ensures that there are no
