@@ -235,6 +235,16 @@ path () {
 }
 export -f path
 
+if [[ $OSTYPE == linux* ]]; then
+    # Changes default file permissions from umask 022 (-rwxr-xr-x)
+    umask 077
+
+    # Avoid path duplicates when tmux loads
+    if [ -z "${TMUX}" ]; then
+        export PATH="/home/linuxbrew/.linuxbrew/bin:$HOME/bin:/usr/sbin:$PATH"
+    fi
+fi
+
 # Cygwin only stuff
 if [[ $OSTYPE == cygwin ]]; then
     # Changes default file permissions from umask 022 (-rwxr-xr-x)
