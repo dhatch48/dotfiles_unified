@@ -243,6 +243,8 @@ if [[ $OSTYPE == linux* ]]; then
     if [ -z "${TMUX}" ]; then
         export PATH="/home/linuxbrew/.linuxbrew/bin:$HOME/bin:/usr/sbin:$PATH"
     fi
+    alias brewchk="brew update; brew outdated"
+    alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
 fi
 
 # Cygwin only stuff
