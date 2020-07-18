@@ -275,8 +275,8 @@ if [[ $OSTYPE == cygwin ]]; then
         cygwinSetup="$winhome/Downloads/setup-x86.exe"
     fi
     # Download latest Cygiwn setup and run the installer semi attended
-    alias cygup="wget -N -P $winhome/Downloads/ https://www.cygwin.com/${cygwinSetup##*/} && chmod u+x $cygwinSetup; $cygwinSetup -M"
-    alias cyg-get="$cygwinSetup -q -P"
+    alias cygup="wget -N -P \"$winhome/Downloads/\" https://www.cygwin.com/${cygwinSetup##*/} && chmod u+x \"$cygwinSetup\"; \"$cygwinSetup\" -M"
+    alias cyg-get="\"$cygwinSetup\" -q -P"
     alias sudo='cygstart --action=runas'
     alias arp='arp -a |tr - :'
     alias down="cd $winhome/Downloads"
