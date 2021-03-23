@@ -42,7 +42,7 @@ alias tarc='tar -czvf'   # archive to file and gzip
 alias tarx='tar -xzvf'   # unarchive and ungzip
 alias less='less -iMRS'
 alias svns='svn stat -u'
-alias st="tmuxp load work || tmux"
+alias st="tmuxp load carlsbad || tmux"
 alias findswap="find . -iname '*.swp'"
 alias rmswap="find . -iname '*.swp' -print0 | xargs -0 rm"
 # Show bash keybindings

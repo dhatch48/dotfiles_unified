@@ -1,0 +1,9 @@
+session_name: carlsbad
+windows:
+  - window_name: todo
+    panes:
+      - docs && vim todo.md
+    focus: true
+  - window_name: bash
+    panes:
+      - 
