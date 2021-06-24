@@ -7,7 +7,9 @@ colorscheme koehler
 "colorscheme pablo
 "colorscheme ron
 
-"set ssop-=options    " do not store global and local values in a session
+set lines=35 columns=105
+
+set ssop-=options    " do not store global and local values in a session
 
 function! MakeSession()
   let b:sessiondir = $HOME
